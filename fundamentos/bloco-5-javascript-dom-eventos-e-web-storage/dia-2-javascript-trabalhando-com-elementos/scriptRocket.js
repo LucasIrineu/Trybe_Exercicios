@@ -5,3 +5,16 @@ console.log(document.querySelector('#elementoOndeVoceEsta').previousElementSibli
 console.log(document.querySelector('#elementoOndeVoceEsta').parentElement.childNodes[4]);
 console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
 console.log(document.querySelector('#pai').children[2]);
+
+let pai = document.querySelector('#pai');
+let elementoBrother = document.createElement('section');
+
+pai.appendChild(elementoBrother);
+elementoBrother.innerText='elemento irmão de #ondeVoceEsta';
+console.log(elementoBrother);
+
+let elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+let filhoOndeVoceEsta = document.createElement('p');
+
+elementoOndeVoceEsta.appendChild(filhoOndeVoceEsta);
+filhoOndeVoceEsta.innerText='elemento filho de #ondeVoceEstá';
