@@ -74,6 +74,52 @@
     centerContent.appendChild(paragraph);
     paragraph.innerText='cá estamos mais uma outra vez exibindo as habilidades adquiridas nessa jornada de conhecimento';
 
+    let leftContent = document.createElement('section');
+    main.appendChild(leftContent);
+    leftContent.className = 'left-content';
+
+    let rightContent = document.createElement('section');
+    main.appendChild(rightContent);
+    rightContent.className = 'right-content';
+
+    let image = document.createElement('img');
+    leftContent.appendChild(image);
+    image.src = 'https://picsum.photos/200';
+    image.className = 'small-image';
+
+    let list = document.createElement('ul');
+    rightContent.appendChild(list);
+
+    
+    arrayLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    for (let i = 0; i < arrayLista.length; i += 1){
+        let itemDaLista = arrayLista[i];
+        const listItem = document.createElement('li');
+        listItem.innerText = itemDaLista
+        list.appendChild(listItem)
+    }
+
+    for (let i = 1; i <= 3; i += 1) {
+        const h3Header = document.createElement('h3');
+        h3Header.innerHTML = 'Texto ' + i;
+        main.appendChild(h3Header);
+        //exerc 2 add classe
+        h3Header.className = 'description';
+    }
+
+    h1.className = 'title';
+    main.removeChild(leftContent);
+
+    rightContent.style.marginRight = 'auto';
+
+    main.style.backgroundColor = 'green';
+
+    list.lastChild.remove();
+    list.lastChild.remove();
+
+    
+
+
     </script>
   </body>
 </html>
